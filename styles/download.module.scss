@@ -1,0 +1,23 @@
+.download{
+    height: 80px;
+    width: 312px;
+    padding: 16px 24px;
+    border: 1px solid var(--border-gray);
+    border-radius: 16px;
+    font-family: Noto Sans;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    &_text_container{
+        margin-left: 16px;
+        >b:last-of-type{
+            font-family: Gadugi;
+            font-size: 20px;
+        }
+    }
+    img{
+        align-self: flex-start;
+    }
+}

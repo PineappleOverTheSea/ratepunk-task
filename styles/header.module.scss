@@ -1,0 +1,23 @@
+.header{
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid var(--border-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        li{
+            color: var(--text-black);
+            margin: 26px;
+            font-size: 20px;
+            font-family: Noto Sans;
+        }
+        li:hover{
+            color: var(--blue)
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.container{
+    main{
+        height: 925px;
+        background-color: var(--yellow);
+        border: 1px solid var(--border-gray);
+    }
+    section{
+        padding: 32px;
+        background-color: var(--background-dark-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        
+    }
+    .reviews_chrome{
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        gap: 16px;
+        .stars{
+            display: flex;
+            gap: 4px;
+        }
+        .stars + div{
+            color: white;
+            font-size: 20px;
+            font-family: Noto Sans;
+        }
+    }
+}
