@@ -1,8 +1,60 @@
 .container{
+    display: flex;
+    flex-direction: column;
+    font-family: Noto Sans;
+    color: var(--text-black);
     main{
-        height: 925px;
+        padding: 4rem 0;
+
+        flex-grow: 1;
         background-color: var(--yellow);
         border: 1px solid var(--border-gray);
+
+        display: flex;
+        justify-content: center;
+        .referral{
+            width: 552px;
+            height: 795px;
+            padding: 4rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 1rem;
+            background-color: var(--background-light-gray);
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            >*{
+                width: 100%;
+            }
+            b{
+                font-size: 3rem;
+                font-family: Caveat Brush;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 1.25rem;
+            }
+            input{
+                border: 1px solid var(--border-gray);
+                border-radius: 0.5rem;
+                font-size: 1.25rem;
+                padding: 1rem;
+            }
+            button{
+                padding: 1rem;
+                text-transform: capitalize;
+                color: #fff;
+                background-color: var(--blue);
+                cursor: pointer;
+                border: 1px solid var(--border-gray);
+                border-radius: 0.5rem;
+                font-size: 1.25rem;
+            }
+            div{
+                color: var(--text-gray);
+                margin-top: auto;
+            }
+        }
     }
     section{
         padding: 32px;
@@ -11,7 +63,7 @@
         align-items: center;
         justify-content: center;
         gap: 16px;
-        
+
     }
     .reviews_chrome{
         display: flex;
@@ -24,8 +76,11 @@
         }
         .stars + div{
             color: white;
-            font-size: 20px;
+            font-size: 1.25rem;
             font-family: Noto Sans;
         }
     }
+}
+.wrapper{
+    margin: 0 auto;
 }

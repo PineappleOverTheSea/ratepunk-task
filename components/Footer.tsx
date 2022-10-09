@@ -17,7 +17,7 @@ export const Footer = () => {
                     © 2021 Ratepunk. All Rights Reserved.
                 </div>
             </div>
-            <div className={styles.other}>
+            <div className={styles.links}>
                 <div className={styles.quick_links}>
                     <b>quick links</b>
                     <ul>
@@ -28,21 +28,23 @@ export const Footer = () => {
                         <li><Link href="">privacy policy</Link></li>
                     </ul>
                 </div>
-                <div className={styles.contact}>
-                    <b>contact</b>
-                    <ul>
-                        <li>hi@ratepunk.com</li>
-                    </ul>
-                </div>
-                <div className={styles.social}>
-                    <b>social</b>
-                    <ul>
-                        <li><Link href=""><Image src="/images/svg/instagram.svg" height="16px" width="16px"/></Link></li>
-                        <li><Link href=""><Image src="/images/svg/facebook.svg" height="16px" width="16px"/></Link></li>
-                        <li><Link href=""><Image src="/images/svg/linkedin.svg" height="16px" width="16px"/></Link></li>
-                        <li><Link href=""><Image src="/images/svg/twitter.svg" height="16px" width="16px"/></Link></li>
-                        <li><Link href=""><Image src="/images/svg/tiktok.svg" height="16px" width="16px"/></Link></li>
-                    </ul>
+                <div className={styles.contact_social}>
+                    <div className={styles.contact}>
+                        <b>contact</b>
+                        <ul>
+                            <li><Link href="">hi@ratepunk.com</Link></li>
+                        </ul>
+                    </div>
+                    <div className={styles.social}>
+                        <b>social</b>
+                        <ul>
+                            <li><Link href=""><Image src="/images/svg/instagram.svg" height="16px" width="16px"/></Link></li>
+                            <li><Link href=""><Image src="/images/svg/facebook.svg" height="16px" width="16px"/></Link></li>
+                            <li><Link href=""><Image src="/images/svg/linkedin.svg" height="16px" width="16px"/></Link></li>
+                            <li><Link href=""><Image src="/images/svg/twitter.svg" height="16px" width="16px"/></Link></li>
+                            <li><Link href=""><Image src="/images/svg/tiktok.svg" height="16px" width="16px"/></Link></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>

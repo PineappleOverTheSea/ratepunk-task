@@ -1,33 +1,42 @@
 .footer{
-    min-height: 348px;
+    padding-top: 64px;
+    padding-bottom: 58px;
     background-color: var(--background-light-gray);
     border: 1px solid var(--border-gray);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Noto Sans;
     color: var(--text-black);
 
+    display: flex;
+    justify-content: center;
+    gap: 128px;
     b{
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     ul{
         padding: 0;
+        margin: 24px 0 0 0;
         list-style: none;
         display: flex;
     }
     .about{
-        max-width: 550px;
-        >div{
-            color: var(--text-light-gray);
-        }
-    }
-    .other{
+        width: 544px;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        p{
+            margin: 0;
+        }
+        >div{
+            color: var(--text-light-gray);
+            margin-top: auto;
+        }
+    }
+    
+    .links{
+        display: flex;
+        gap: 110px;
         .quick_links{
             ul{
                 flex-direction: column;
@@ -35,18 +44,45 @@
                 li{
                     text-transform: capitalize;
                 }
+                li:hover{
+                    color: var(--blue);
+                }
             }
         }
-        .social{
+        .contact_social{
             display: flex;
             flex-direction: column;
-            ul{
-                align-items: center;
-                li{
-                    padding: 8px;
-                    background-color: var(--blue);
-                    border: 1px solid var(--border-gray);
-                    border-radius: 8px;
+            justify-content: space-between;
+            .contact{
+                ul{
+                    padding-left: 24px;
+                    list-style-image: url("../public/images/svg/email-footer.svg");
+                    li{
+                        padding-left: 6px;
+                    }
+                    li:hover{
+                        color: var(--blue);
+                    }
+                }
+            }
+            .social{
+                display: flex;
+                flex-direction: column;
+                ul{
+                    align-items: center;
+                    display: flex;
+                    gap: 8px;
+                    li{
+                        padding: 8px;
+                        background-color: var(--blue);
+                        border: 1px solid var(--border-gray);
+                        border-radius: 0.5rem;
+                        display: flex; //sutaiso paveiksliuką
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        background-color: var(--yellow);
+                    }
                 }
             }
         }

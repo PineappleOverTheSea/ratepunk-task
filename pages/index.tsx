@@ -16,7 +16,20 @@ const Home: NextPage = () => {
 
       <Header />
       <main>
+        <div className={styles.wrapper}>
+          <div className={styles.main_content}>
+            <div className={styles.referral}>
+              <b>refer friends get rewards</b>
+              <p>Refer your friends to us and earn hotel booking vouchers. We'll give you 1 coin for each friend that installs our extension. Minimum cash-out at 20 coins.</p>
+              <input type="email" placeholder="Enter your email address"/>
+              <button>get referral link</button>
+              <div>Limits on max rewards apply.</div>
+            </div>
+            <div className={styles.referral_instructions}>
 
+            </div>
+          </div>
+        </div>
       </main>
       <section>
         <Download image_path={"/images/svg/chrome.svg"} store_name={"chrome web store"} />
