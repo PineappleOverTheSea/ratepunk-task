@@ -1,0 +1,40 @@
+.step{
+    width: 448px;
+    font-family: Noto Sans;
+
+    display: grid; //display flex labai keistai su paveikslėliais veikė.
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    .image_container{
+        position: relative;
+        width: 128px;
+    }
+    .step_content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        b:first-of-type{
+            font-size: 1.25rem;
+            color: var(--blue);
+            text-transform: uppercase;
+        }
+        b:last-of-type{
+            font-size: 2rem;
+            font-family: Caveat Brush;
+            text-transform: uppercase;
+        }
+        p{
+            margin: 0;
+            font-size: 1.25rem;
+        }
+    }
+    
+}
+.step:nth-of-type(2n){
+    .image_container{
+        grid-column: 2;
+    }
+    .step_content{
+        grid-row: 1;
+    }
+}
