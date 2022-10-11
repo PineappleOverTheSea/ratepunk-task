@@ -41,11 +41,11 @@ export const Footer = () => {
                             <div className={styles.social}>
                                 <b>social</b>
                                 <ul>
-                                    <li><Link href=""><Image src="/images/svg/instagram.svg" height="16px" width="16px"/></Link></li>
-                                    <li><Link href=""><Image src="/images/svg/facebook.svg" height="16px" width="16px"/></Link></li>
-                                    <li><Link href=""><Image src="/images/svg/linkedin.svg" height="16px" width="16px"/></Link></li>
-                                    <li><Link href=""><Image src="/images/svg/twitter.svg" height="16px" width="16px"/></Link></li>
-                                    <li><Link href=""><Image src="/images/svg/tiktok.svg" height="16px" width="16px"/></Link></li>
+                                    <li><a href=""><Image src="/images/svg/instagram.svg" height="16px" width="16px"/></a></li>
+                                    <li><a href=""><Image src="/images/svg/facebook.svg" height="16px" width="16px"/></a></li>
+                                    <li><a href=""><Image src="/images/svg/linkedin.svg" height="16px" width="16px"/></a></li>
+                                    <li><a href=""><Image src="/images/svg/twitter.svg" height="16px" width="16px"/></a></li>
+                                    <li><a href=""><Image src="/images/svg/tiktok.svg" height="16px" width="16px"/></a></li>
                                 </ul>
                             </div>
                         </div>

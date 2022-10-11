@@ -77,8 +77,10 @@
                             background-color: var(--blue);
                             border: 1px solid var(--border-gray);
                             border-radius: 0.5rem;
-                            display: flex; //sutaiso paveiksliuką
                             cursor: pointer;
+                            a{
+                                display: flex; //sutaiso paveiksliuką
+                            }
                         }
                         li:hover{
                             background-color: var(--yellow);

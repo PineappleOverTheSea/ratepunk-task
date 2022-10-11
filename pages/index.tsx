@@ -60,8 +60,8 @@ const Home: NextPage = () => {
       <section>
         <div className={wrapper.wrapper}>
           <div className={styles.download_container}>
-            <Download image_path={"/images/svg/chrome.svg"} store_name={"chrome web store"} />
-            <Download image_path={"/images/svg/apple.svg"} store_name={"apple app store"} />
+            <Download image_path={"/images/svg/chrome.svg"} store_name={"chrome web store"} store_link={"https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk"} />
+            <Download image_path={"/images/svg/apple.svg"} store_name={"apple app store"} store_link={"https://apps.apple.com/app/ratepunk/id1607823726"}/>
             <div className={styles.reviews_chrome}>
               <div className={styles.stars}>
                 <div className={styles.star_wrapper}>
