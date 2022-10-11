@@ -1,7 +1,6 @@
 .header{
     background-color: #fff;
     border: 1px solid var(--border-gray);
-    
     .content{
         display: flex;
         justify-content: space-between;
@@ -20,9 +19,15 @@
                 color: var(--blue)
             }
         }
-        .menu_wrapper{
+        .nav_wrap{
             display: none;
+            .menu_wrapper{
+                grid-row: 1;
+                grid-column: 1;
+                display: flex;
+            }
         }
+        
     }
 }
 
@@ -30,20 +35,34 @@
     .header{
         padding: 0.75rem 0;
         position: relative;
+        border-bottom: none;
         .content{
             ul{
                 flex-direction: column;
+                width: 100%;
+                left: 0;
+                padding: 1rem;
                 position: absolute;
+                top: 100%;
                 background-color: #fff;
-                right: -200px;
+                border-bottom: 1px solid var(--border-gray);
+                transition: transform 0.25s ease-in-out;
                 li{
                     margin: 8px 0px;
+                    font-size: 1rem;
                 }
             }
-            .menu_wrapper{
-                display: flex;
+            .nav_wrap{
+                display: grid;
+                .nav_hidden{
+                    display: none;
+                }
+            }
+            .menu_hidden{
+                transform: translate(101%);
             }
         }
     }
 }
+
     
