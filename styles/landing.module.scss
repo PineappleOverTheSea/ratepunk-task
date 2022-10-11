@@ -3,63 +3,23 @@
     flex-direction: column;
     font-family: Noto Sans;
     color: var(--text-black);
-    margin: 0 auto;
+    overflow: hidden;
     main{
         padding: 4rem 0;
-
-        flex-grow: 1;
         background-color: var(--yellow);
         border: 1px solid var(--border-gray);
 
         display: flex;
         justify-content: center;
-        .referral{
-            width: 552px;
-            height: 795px;
-            padding: 4rem;
-            border: 1px solid var(--border-gray);
-            border-radius: 1rem;
-            background-color: var(--background-light-gray);
 
+        .main_content{
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            >*{
-                width: 100%;
+            gap: 8rem;
+            .referral_instructions{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
             }
-            b{
-                font-size: 3rem;
-                font-family: Caveat Brush;
-                text-transform: uppercase;
-            }
-            p{
-                font-size: 1.25rem;
-            }
-            input{
-                border: 1px solid var(--border-gray);
-                border-radius: 0.5rem;
-                font-size: 1.25rem;
-                padding: 1rem;
-            }
-            button{
-                padding: 1rem;
-                text-transform: capitalize;
-                color: #fff;
-                background-color: var(--blue);
-                cursor: pointer;
-                border: 1px solid var(--border-gray);
-                border-radius: 0.5rem;
-                font-size: 1.25rem;
-            }
-            div{
-                color: var(--text-gray);
-                margin-top: auto;
-            }
-        }
-        .referral_instructions{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
         }
     }
     section{
@@ -69,29 +29,62 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 16px;
+            gap: 1rem;
         }
-    }
-    .reviews_chrome{
-        display: flex;
-        align-items: center;
-        padding: 16px;
-        gap: 16px;
-        .stars{
+        .reviews_chrome{
             display: flex;
-            gap: 4px;
-        }
-        .stars + div{
-            color: white;
-            font-size: 1.25rem;
-            font-family: Noto Sans;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+            .stars{
+                display: flex;
+                gap: 0.25rem;
+                .star_wrapper{
+                    display: flex;
+                    height: 1.25rem;
+                    width: 1.25rem;
+                    position: relative;
+                }
+            }
+            .stars + div{
+                color: white;
+                font-size: 1.25rem;
+                font-family: Noto Sans;
+            }
         }
     }
 }
-.wrapper{
-    margin: 0 auto;
-}
-.main_content{
-    display: flex;
-    gap: 8rem;
+
+@media screen and (max-width: 375px){
+    .container{
+        main{
+            padding: 2rem 0 3rem 0;
+            .main_content{
+                flex-direction: column;
+                gap: 3rem;
+                .referral_instructions{
+                    gap: 3rem;
+                }
+            }
+        }
+        section{
+            padding: 2rem 1rem;
+            .download_container{
+                flex-direction: column;
+            }
+            .reviews_chrome{
+                .stars{
+                    .star_wrapper{
+                        height: 1rem;
+                        width: 1rem;
+                    }
+                }
+                .stars + div{
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+    }
+    
 }

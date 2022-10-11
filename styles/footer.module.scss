@@ -8,7 +8,6 @@
     .content{
         display: flex;
         justify-content: space-between;
-        // gap: 128px;
         b{
             text-transform: uppercase;
             font-size: 1.25rem;
@@ -20,7 +19,7 @@
             display: flex;
         }
         .about{
-            width: 544px;
+            max-width: 544px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -28,7 +27,7 @@
             p{
                 margin: 0;
             }
-            >div{
+            .bottom_text{
                 color: var(--text-light-gray);
                 margin-top: auto;
             }
@@ -86,6 +85,34 @@
                         }
                     }
                 }
+            }
+        }
+        .bottom_text{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .footer{
+        padding: 3rem 1rem;
+        .content{
+            flex-direction: column;
+            gap: 3rem;
+            .about{
+                .bottom_text{
+                    display: none;
+                } 
+            }
+            .links{
+                flex-direction: column;
+                gap: 32px;    
+                .contact_social{
+                    gap: 32px;
+                }        
+            }
+            .bottom_text{
+                display: block;
             }
         }
     }

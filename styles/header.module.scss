@@ -1,7 +1,7 @@
 .header{
-    height: 80px;
     background-color: #fff;
     border: 1px solid var(--border-gray);
+    
     .content{
         display: flex;
         justify-content: space-between;
@@ -18,6 +18,30 @@
             }
             li:hover{
                 color: var(--blue)
+            }
+        }
+        .menu_wrapper{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .header{
+        padding: 0.75rem 0;
+        position: relative;
+        .content{
+            ul{
+                flex-direction: column;
+                position: absolute;
+                background-color: #fff;
+                right: -200px;
+                li{
+                    margin: 8px 0px;
+                }
+            }
+            .menu_wrapper{
+                display: flex;
             }
         }
     }

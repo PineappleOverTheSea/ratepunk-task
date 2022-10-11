@@ -5,6 +5,7 @@ import { Download } from '../components/Download'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Layout } from '../components/Layout'
+import { Referral } from '../components/Referral'
 import styles from "../styles/landing.module.scss"
 import stepStyles from "../styles/step.module.scss"
 import wrapper from "../styles/wrapper.module.scss"
@@ -20,13 +21,7 @@ const Home: NextPage = () => {
       <main>
         <div className={wrapper.wrapper}>
           <div className={styles.main_content}>
-            <div className={styles.referral}>
-              <b>refer friends get rewards</b>
-              <p>Refer your friends to us and earn hotel booking vouchers. We'll give you 1 coin for each friend that installs our extension. Minimum cash-out at 20 coins.</p>
-              <input type="email" placeholder="Enter your email address"/>
-              <button>get referral link</button>
-              <div>Limits on max rewards apply.</div>
-            </div>
+            <Referral />
             <div className={styles.referral_instructions}>
                 <div className={stepStyles.step}>
                   <div className={stepStyles.image_container}>
@@ -69,11 +64,21 @@ const Home: NextPage = () => {
             <Download image_path={"/images/svg/apple.svg"} store_name={"apple app store"} />
             <div className={styles.reviews_chrome}>
               <div className={styles.stars}>
-                <Image src="/images/star-white.png" height="20px" width="20px" />
-                <Image src="/images/star-white.png" height="20px" width="20px" />
-                <Image src="/images/star-white.png" height="20px" width="20px" />
-                <Image src="/images/star-white.png" height="20px" width="20px" />
-                <Image src="/images/star-white.png" height="20px" width="20px" />
+                <div className={styles.star_wrapper}>
+                  <Image src="/images/star-white.png" layout="fill"/>
+                </div>
+                <div className={styles.star_wrapper}>
+                  <Image src="/images/star-white.png" layout="fill"/>
+                </div>
+                <div className={styles.star_wrapper}>
+                  <Image src="/images/star-white.png" layout="fill"/>
+                </div>
+                <div className={styles.star_wrapper}>
+                  <Image src="/images/star-white.png" layout="fill"/>
+                </div>
+                <div className={styles.star_wrapper}>
+                  <Image src="/images/star-white.png" layout="fill"/>
+                </div>
               </div>
               <div>Chrome Store reviews</div>
             </div>

@@ -16,7 +16,7 @@ export const Footer = () => {
                             and runs a price comparison, so you can be confident in knowing you’re
                             getting the best deal!
                         </p>
-                        <div>
+                        <div className={styles.bottom_text}>
                             © 2021 Ratepunk. All Rights Reserved.
                         </div>
                     </div>
@@ -49,6 +49,9 @@ export const Footer = () => {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div className={styles.bottom_text}>
+                            © 2021 Ratepunk. All Rights Reserved.
                     </div>
                 </div>
             </div>
