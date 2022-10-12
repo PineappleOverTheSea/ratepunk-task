@@ -12,15 +12,6 @@ export const Referral = () =>{
     const emailContainerRef = useRef<HTMLDivElement>(null)
     const reflinkContainerRef = useRef<HTMLDivElement>(null)
 
-    const postMail = new Request("https://api.jsonbin.io/v3/b/6346e6872b3499323bdc3d8e", {method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-            "X-Master-Key": "$2b$10$FfBbqP.8iSNCyxGnfEIvceAYxTK/KeUH1qBK82kJsSDuFmzUQx9G6"
-        },
-        body: JSON.stringify({email: email})
-    })
-
-
     const onEmailChange = (e : ChangeEvent<HTMLInputElement>) =>{
         const emailWarning = ref.current
         const value = e.target.value
@@ -36,6 +27,14 @@ export const Referral = () =>{
         if(validate()){
             emailContainer?.classList.add(styles.hide_container)
             reflinkContainer?.classList.remove(styles.hide_container)
+
+            const postMail = new Request("https://api.jsonbin.io/v3/b/6346e6872b3499323bdc3d8e", {method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Master-Key": "$2b$10$FfBbqP.8iSNCyxGnfEIvceAYxTK/KeUH1qBK82kJsSDuFmzUQx9G6"
+                },
+                body: JSON.stringify({email: email})
+            })
             fetch(postMail)
         }
     }
@@ -74,7 +73,7 @@ export const Referral = () =>{
                     <b>Your email is confirmed!</b>
                 </div>
                 <input ref={referralInputRef} type="text" value="https://ratepunk.com/referral" disabled/>
-                <button onClick={onCopy}>Copy</button>
+                <button onClick={onCopy} type="button">Copy</button>
             </div>
             <div className={styles.bottom_text}>Limits on max rewards apply.</div>
         </form>
