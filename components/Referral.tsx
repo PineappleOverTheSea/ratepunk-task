@@ -59,7 +59,9 @@ export const Referral = () =>{
             </div>
             <div ref={reflinkContainerRef} className={`${styles.reflink_container} ${styles.hide_container}`}>
                 <div className={styles.success_container}>
-                    <Image src="/images/svg/success.svg" height="32px" width="32px" />
+                    <div className={styles.image_container}>
+                        <Image src="/images/svg/success.svg" layout="fill"/>
+                    </div>
                     <b>Your email is confirmed!</b>
                 </div>
                 <input ref={referralInputRef} type="text" value="https://ratepunk.com/referral" disabled/>

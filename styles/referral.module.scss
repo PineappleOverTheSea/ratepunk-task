@@ -57,6 +57,12 @@
             gap: 1rem;
             align-items: center;
             margin-bottom: 1rem;
+            .image_container{
+                height: 32px;
+                width: 32px;
+                display: flex;
+                position: relative;
+            }
         }
         input{
             width: 100%;
@@ -107,12 +113,18 @@
             font-size: 1rem;
             margin-bottom: 1.5rem;
         }
-        .email_container{
-            input{
-                font-size: 1rem;
-            }
-            button{
-                font-size: 1rem;
+        input{
+            font-size: 1rem;
+        }
+        button{
+            font-size: 1rem;
+        }
+        .reflink_container{
+            .success_container{
+                .image_container{
+                    height: 24px;
+                    width: 24px;
+                }
             }
         }
     }
