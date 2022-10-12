@@ -12,6 +12,14 @@ export const Referral = () =>{
     const emailContainerRef = useRef<HTMLDivElement>(null)
     const reflinkContainerRef = useRef<HTMLDivElement>(null)
 
+    const postMail = new Request("https://api.jsonbin.io/v3/b/6346e6872b3499323bdc3d8e", {method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Master-Key": "$2b$10$FfBbqP.8iSNCyxGnfEIvceAYxTK/KeUH1qBK82kJsSDuFmzUQx9G6"
+        },
+        body: JSON.stringify({email: email})
+    })
+
 
     const onEmailChange = (e : ChangeEvent<HTMLInputElement>) =>{
         const emailWarning = ref.current
@@ -28,6 +36,7 @@ export const Referral = () =>{
         if(validate()){
             emailContainer?.classList.add(styles.hide_container)
             reflinkContainer?.classList.remove(styles.hide_container)
+            fetch(postMail)
         }
     }
 
